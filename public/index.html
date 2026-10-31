@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zuppty · Pedidos</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+  <header>
+    <a href="/" class="brand"><span class="brand-icon">z</span>Zuppty<span class="brand-area">OPERAÇÃO</span></a>
+    <span class="demo-tag"><i></i> Loja de demonstração</span>
+  </header>
+  <main>
+    <section class="toolbar">
+      <div><p class="breadcrumb">PAINEL DA LOJA <span>/</span> PEDIDOS</p><h1>Central de pedidos<span class="title-dot">.</span></h1></div>
+      <div class="session"><label for="account">Acessar como</label><select id="account" disabled><option>Carregando contas…</option></select></div>
+    </section>
+    <div class="context-bar"><p id="role-hint">Escolha uma conta para começar.</p><span>Modo teste · sem cobrança real</span></div>
+    <div id="notice" role="status" aria-live="polite" hidden></div>
+    <section class="workspace">
+      <aside class="catalog-panel"><div class="section-heading"><h2>Novo pedido</h2><span class="panel-kicker">CARDÁPIO</span></div><form id="checkout"><div id="catalog"></div><fieldset><legend>Tipo de pedido</legend><label class="radio"><input type="radio" name="fulfillment" value="DELIVERY" checked> Entrega</label><label class="radio"><input type="radio" name="fulfillment" value="PICKUP"> Retirada</label></fieldset><div class="cart-total"><span>Total</span><strong id="total">R$ 0,00</strong></div><button class="primary" id="create" type="submit" disabled>Criar pedido</button><p class="muted small checkout-note">Frete não incluído neste ambiente.</p></form></aside>
+      <section class="orders-panel"><div class="section-heading"><h2>Pedidos</h2><button id="refresh" class="text-button" aria-label="Atualizar lista de pedidos">↻ Atualizar</button></div><p id="scope" class="muted small">Seus pedidos aparecerão aqui.</p><div id="orders" class="order-list"></div></section>
+      <section class="detail-panel"><div class="section-heading"><h2>Detalhes do pedido</h2><span class="panel-kicker">ATENDIMENTO</span></div><div id="detail"><p class="empty">Selecione um pedido na lista.</p></div></section>
+    </section>
+    <details class="demo-help"><summary>Como testar o fluxo</summary><div><p><strong>01. Cliente</strong>Crie um pedido como Ana e simule o pagamento. Repita a requisição para conferir a mesma transação.</p><p><strong>02. Loja</strong>Troque o acesso para Operação da loja e avance o pedido até a entrega.</p><p><strong>03. Outro cliente</strong>Entre como Bruno. Os pedidos de Ana não ficam disponíveis para essa conta.</p></div></details>
+  </main><footer><span><strong>Zuppty</strong> / OrderFlow</span><span>Desenvolvido por Ramon Oliveira</span></footer>
+</body></html>
